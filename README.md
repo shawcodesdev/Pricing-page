@@ -26,6 +26,10 @@ This project is a simple pricing page prototype that displays three subscription
 - A checkbox is used as a custom toggle switch in the header section.
 - The default view shows annual pricing. When switched on, the monthly pricing values appear.
 
+## Preview
+
+![Pricing Page Preview](data/Preview.png)
+
 ## License
 
 This project is open for personal use and modification.
