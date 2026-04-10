@@ -1,0 +1,214 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+body{
+    margin: 1rem;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+}
+.wrapper{
+    width: 95vw;
+    height: 88vh;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: blueviolet;
+    background-image: url("data/bg-bottom.svg"), url("data/bg-top.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left, top right;
+    background-size: 25vw, 25vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(251, 251, 255);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1); /* Exhale / Resting state */
+  }
+  50% {
+    transform: scale(1.05); /* Inhale / Expanded state */
+  }
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    padding-bottom: 3.5rem;
+}
+.firstLine{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(139, 110, 156);
+    margin: 3rem 0 2rem 0;
+    text-align: center;
+}
+.secondLine{
+    align-self: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(139, 110, 156);
+    justify-content: baseline;
+}
+
+.annually, .monthly {
+    margin-top: 5rem;
+}
+
+.toggle{
+    margin-bottom: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 3vmax;
+    height: 1.5vmax;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(144, 144, 211);
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    border-radius: 50px;
+}
+
+.slider:before{
+    position:absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 1px;
+    bottom: 1px;
+    background-color: whitesmoke;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+}
+
+input:checked + .slider:before{
+    -webkit-transform: translateX(2vmax);
+    -ms-transform: translateX(2vmax);
+    transform: translateX(1.5vmax);
+}
+
+input:checked + .slider{
+    background-color: rgb(144, 144, 211);
+}
+
+.slider::before{
+    border-radius: 50%;
+}
+
+.options{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option1, .option2, .option3{
+    padding: 1rem;
+    width: 19rem;
+    height: 24rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    color: rgb(144, 144, 211);
+    transition: transform 0.6s ease;
+} 
+
+.option2{
+    height: 27rem;
+    background-color: rgb(144, 144, 211);
+    color: whitesmoke;
+}
+
+.option1:hover, .option2:hover, .option3:hover{
+    width: 21rem;
+    height: 27rem;
+    transform: scale(1.03);
+    justify-self: s;
+} 
+
+.price{
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+#price1, #price3{
+    color: rgb(79, 79, 135);
+}
+
+.lines-basic, .lines-master{
+    color: rgb(228, 228, 243);
+    font-weight: 100;
+    width: 17rem;
+    opacity: 0.3;
+}
+
+.lines-prof{
+    color: rgb(185, 185, 251);
+    font-weight: 100;
+    width: 17rem;
+    opacity: 0.3;
+}
+
+.details{
+    margin: 5px;
+}
+
+#master-learn-more, #basic-learn-more, #prof-learn-more{
+    width: 16rem;
+    max-width: 20rem;
+    height: 2.8rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    background-color: rgb(144, 144, 211);
+    color: whitesmoke;
+    border-radius: 5px;
+    border: none;
+    align-self: center;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
+}
+
+#master-learn-more:hover, #basic-learn-more:hover{
+    background-color: whitesmoke;
+    color: rgb(144, 144, 211);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
+
+#prof-learn-more{
+    background-color: whitesmoke;
+    color: rgb(144, 144, 211);
+}
+
+#prof-learn-more:hover{
+    background-color: rgb(144, 144, 211);
+    color: whitesmoke;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
